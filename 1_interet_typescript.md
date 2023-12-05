@@ -29,7 +29,7 @@ On peut alors créer des fichiers TypeScript. La compilation en JS se fait via l
 npx tsc my-file.ts # tsc pour "TypeScript Compilator" (npx l'utilitaire installé avec node.js pour lancer une commande)
 ```
 
-Après l'exécution de cette commande, on voit bien le fichier qu'on vient d'écrire en TypeScript, compilé en JavaScript.
+Après l'exécution de cette commande, on voit bien le fichier qu'on vient d'écrire en TypeScript (`const age: number = 10;`), compilé en JavaScript.
 Si je modifie volontairement une constante, ou que je souhaite mettre une string à la place d'un number TS, alors lorsque j'exécuterai la commande ci-dessus, la commande me signalera une erreur.
 
 Notons que VS Code signale instantanément les erreurs TypeScript.
