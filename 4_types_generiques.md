@@ -1,0 +1,2 @@
+# Rendez vos types génériques
+
