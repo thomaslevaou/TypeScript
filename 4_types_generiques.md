@@ -79,4 +79,4 @@ const stats: Record<StatisticNames, number> = {
 };
 ```
 
-Et il y a plein d'autres types utilitaires qui existent, et qui sont accessibles dans la doc de TypeScript.
+Et il y a plein d'autres types utilitaires qui existent, et qui sont accessibles dans la [doc de TypeScript](https://www.typescriptlang.org/docs/handbook/utility-types.html), comme `Omit` utilisé dans l'exercice pour récupérer un objet sans une propriété.
