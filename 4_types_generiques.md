@@ -32,6 +32,7 @@ const armory = createShop<Equipment>('My armory', { name: 'Bob', life: 100, atta
 ```
 
 On peut faire pas mal de trucs en plus avec des types génériques (combiner les uns avec les autres, contraindre leurs paramètres, créer des types conditionnels ou même écrire de véritables fonctions, ...) mais c'est hors scope du cours.
+Doc dès que je vois un truc avec les types conditionnels : <https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types>
 
 Quand on utilise un tableau de données du même type avec un tableau `Array`, on utilise en réalité un type générique.
 Le type `Array` pourrait littéralement être défini comme `type Array<T> = T[];`.
@@ -80,3 +81,13 @@ const stats: Record<StatisticNames, number> = {
 ```
 
 Et il y a plein d'autres types utilitaires qui existent, et qui sont accessibles dans la [doc de TypeScript](https://www.typescriptlang.org/docs/handbook/utility-types.html), comme `Omit` utilisé dans l'exercice pour récupérer un objet sans une propriété.
+
+Attention le `T` est juste là pour dire "Attention le type générique est utilisé", mais ça peut être pour des utilisations un peu cheloues comme :
+
+```TS
+type NameOrId<T extends number | string> = T extends number
+  ? IdLabel
+  : NameLabel;
+```
+
+Qui veut dire ici "`NameOrId` est un number si le type générique est un dérivé de number sinon une string".
