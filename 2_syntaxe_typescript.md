@@ -2,8 +2,10 @@
 
 ## Types primitifs
 
-Les variables TypeScript s'écrivent selon la syntaxe mot-clé, nom de la variable, type de la variable, valeur de celle-ci.
+Les variables TypeScript s'écrivent selon la syntaxe `mot-clé nom-de-la-variable: type-de-la-variable = valeur-de-celle-ci`.
 Par exemple, `let maVariable: number = 10`.
+
+Notons que TS peut repérer automatiquement que telle variable doit être une string par exemple, juste en faisant `let fruit = 'fraise';` comme en JS standard. C'est juste moins clair à lire.
 
 TypeScript propose **trois types primitifs**: `number`, `string` et `boolean`.
 Attention, en JS les instructions `Boolean`, `Number` et `String` existent aussi, mais signifient autre chose. Les types TypeScript s'écrivent quasiment tout le temps en toutes minuscules !
